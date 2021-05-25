@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'fomantic-ui-css/semantic.css';
+import { Container} from 'semantic-ui-react';
+import './App.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui grid middle aligned background" >
+      <div className="row">
+        <div className="column">
+      <Container>
+        <div className="ui text container center aligned segment inverted" >
+          <h1 className="ui header">
+            EK Specialties
+          </h1>
+          <h2>Property Management & Heavy Equipment 
+           maintenance and repair</h2> 
+            <h2>for the Portland Oregon area</h2>
+          <h3>(406) 998-9555</h3>
+
+        </div>
+      </Container>
+      </div>
+      </div>
     </div>
-  );
+    )
 }
 
 export default App;
