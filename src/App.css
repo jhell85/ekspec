@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "GunPlay";
+  font-weight: normal;
+  src: local("gunplay-3d"), url(./fonts/gunplay-3d.ttf) format("truetype");
+}
+
 body {
   background-color: darkolivegreen;
   height: 100vh;
   width: 100%;
+}
+
+.gunplay-font {
+  font-family: GunPlay;
 }
