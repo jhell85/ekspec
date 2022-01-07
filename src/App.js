@@ -1,14 +1,25 @@
 import React from "react";
 import "./App.css";
 import "./fonts/gunplay-3d.ttf";
+import NavBar from "./Navbar";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const App = () => {
+  const { width } = useWindowDimensions();
   return (
     <div>
-      <h1 className="position-absolute top-50 start-50 translate-middle gunplay-font">EK Specialties</h1>
-      {/* <h2>Property Management & Heavy Equipment maintenance and repair</h2>
-              <h2>for the Portland Oregon area</h2>
-            <h3>(406) 998-9555</h3> */}
+      <NavBar />
+      <div className="position-absolute top-50 start-50 translate-middle text-center">
+        <div
+          className={width > 398 ? "gunplay-font h1" : width > 346 ? "gunplay-font h2" : "gunplay-font h3"}>
+          EK Specialties
+        </div>
+        <div className={width > 398 ? "h2" : width > 346 ? "h3" : "h4"}>
+          <div>Property Management & Heavy Equipment maintenance and repair</div>
+          <div>for the Portland Oregon area</div>
+          <div className="gunplay-font">(406) 998-9555</div>
+        </div>
+      </div>
     </div>
   );
 };
