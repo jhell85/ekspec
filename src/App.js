@@ -1,29 +1,27 @@
-import React from 'react'
-import 'fomantic-ui-css/semantic.css';
-import { Container} from 'semantic-ui-react';
-import './App.css'
+import React from "react";
+import "./App.css";
+import "./fonts/gunplay-3d.ttf";
+import NavBar from "./Navbar";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const App = () => {
+  const { width } = useWindowDimensions();
   return (
-    <div className="ui grid middle aligned background" >
-      <div className="row">
-        <div className="column">
-      <Container>
-        <div className="ui text container center aligned segment inverted" >
-          <h1 className="ui header">
-            EK Specialties
-          </h1>
-          <h2>Property Management & Heavy Equipment 
-           maintenance and repair</h2> 
-            <h2>for the Portland Oregon area</h2>
-          <h3>(406) 998-9555</h3>
-
+    <div>
+      <NavBar />
+      <div className="position-absolute top-50 start-50 translate-middle text-center">
+        <div
+          className={width > 398 ? "gunplay-font h1" : width > 346 ? "gunplay-font h2" : "gunplay-font h3"}>
+          EK Specialties
         </div>
-      </Container>
-      </div>
+        <div className={width > 398 ? "h2" : width > 346 ? "h3" : "h4"}>
+          <div>Property Management & Heavy Equipment maintenance and repair</div>
+          <div>for the Portland Oregon area</div>
+          <div className="gunplay-font">(406) 998-9555</div>
+        </div>
       </div>
     </div>
-    )
-}
+  );
+};
 
 export default App;
