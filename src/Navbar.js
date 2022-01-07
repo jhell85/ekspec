@@ -1,9 +1,7 @@
 import React from "react";
-// import { Container, Nav, NavDropdown } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 const MyNavBar = () => {
   return (
@@ -15,13 +13,13 @@ const MyNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Items</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
-            <Nav.Link href="/portal">Portal</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="#">Items</Nav.Link>
+            <Nav.Link href="#">Services</Nav.Link>
+            <Nav.Link href="#">Portal</Nav.Link>
+            <Nav.Link href="#">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#link">Login</Nav.Link>
+            <Nav.Link href="#">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
